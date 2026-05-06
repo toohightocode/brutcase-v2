@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,331 @@
     <link rel="stylesheet" href="src/styles.min.css">
     <link rel="stylesheet" href="src/customs.css">
     <!-- arrow down-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_downward" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_downward" />
+    <!-- JS -->
+    <script type="module" src="src/app.js"></script>
 </head>
-<body>
+
+<body class="bg-black">
+    <!-- noise overlay -->
+    <div class="noise-overlay"></div>
     <!-- SECTION 1: HERO -->
-    <section id="sec1" class="relative w-full h-screen grayscale flex items-center">
+    <section id="sec1" class="relative flex items-center w-full h-screen grayscale">
         <!-- Gradient Overlays -->
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-[5]"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-[5]"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20 z-[5]"></div>
-        
-        <img class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover object-bottom z-[1]"
-            src="https://images.unsplash.com/photo-1692808615989-9ca39f10b5c3?q=80&w=2070&auto=format&fit=crop" 
+
+        <img class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover object-bottom z-[1] pointer-events-none"
+            src="https://images.unsplash.com/photo-1692808615989-9ca39f10b5c3?q=80&w=2070&auto=format&fit=crop"
             alt="hero background">
-        
-        <div id="content" class="reveal-scale relative z-10 flex flex-col w-full text-white px-6 md:px-12 lg:px-24">
-            <p class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest archivo">BRUTALISM</p>
-            <span class="border h-px border-gray-700 w-[25%] my-4"></span>
-            <p class="text-lg max-w-xl text-gray-200 playfair">An architectural movement that stripped away pretense to reveal the raw truth of structure, material, and human habitation.</p>
+
+        <div id="content" class="relative z-10 flex flex-col w-full px-6 text-white">
+            <p class="text-6xl tracking-widest md:text-8xl lg:text-9xl archivo-display reveal-up">BRUTALISM</p>
+            <span class="border h-px border-gray-700 w-[25%] my-4 reveal-up delay-100"></span>
+            <p class="max-w-xl text-lg text-gray-200 delay-200 playfair reveal-up">An architectural movement that
+                stripped away pretense to reveal the raw truth of structure, material, and human habitation.</p>
         </div>
-        <!-- <span class="material-symbols-outlined text-gray-700 absolute left-1/2 bottom-2 z-[10]">arrow_downward</span> -->
+        <span
+            class="material-symbols-outlined text-gray-700 absolute left-1/2 bottom-4 z-[10] pointer-events-none">arrow_downward</span>
     </section>
 
-    <!-- SECTION 1 -->
-    <section id="sec2" class="">
+    <!-- PRE-SECTION -->
+    <div class="relative py-32 bg-black archivo">
+        <div class="max-w-4xl px-6 mx-auto text-center">
+            <span class="text-[10rem] md:text-[16rem] archivo-display text-white/5 leading-none block select-none">béton
+                brut</span>
+            <div class="relative -mt-24 md:-mt-40">
+                <p class="text-2xl italic leading-relaxed text-gray-300 md:text-4xl playfair reveal-up">
+                    "Raw concrete. Not concrete that pretends to be stone, or marble, or anything else. Concrete that is
+                    proud to be concrete."
+                </p>
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <div class="w-12 h-px bg-white/40"></div>
+                    <span class="text-xs tracking-[0.3em] text-gray-500 uppercase">Le Corbusier, 1952</span>
+                    <div class="w-12 h-px bg-white/40"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <section id="sec2" class="relative text-white bg-neutral-900 archivo">
+        <div class="max-w-6xl px-6 py-24 mx-auto">
+
+            <!-- Titolo + sottotitolo -->
+            <div class="mb-16">
+                <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-6">Chapter I — 1952</span>
+                <h2 class="text-6xl md:text-8xl archivo-display mb-6 leading-[0.9] reveal-up">
+                    THE<br>PROTOTYPE
+                </h2>
+                <div class="w-24 h-px mb-8 bg-white/20"></div>
+                <p class="max-w-xl text-sm leading-relaxed text-gray-400">
+                    Marseille, France. A vertical city for 1,600 souls, raised on pilotis above the earth, its
+                    concrete skin bearing the memory of the timber that shaped it.
+                </p>
+            </div>
+
+            <!-- Paragrafi affiancati, larghezza piena -->
+            <div class="grid gap-8 md:grid-cols-2">
+                <p class="leading-relaxed text-gray-300 delay-100 reveal-up">
+                    Le Corbusier called it <em>Unité d'Habitation</em> — the Housing Unit. But it was more than
+                    housing. It was a manifesto cast in reinforced concrete, 18 stories of communal living where
+                    the corridors became streets and the roof became a landscape. The concrete was not hidden,
+                    not painted, not ashamed. It was <em>béton brut</em> — raw, honest, unflinching.
+                </p>
+                <p class="leading-relaxed text-gray-300 delay-200 reveal-up">
+                    The building breathed. The modulor governed its proportions. Children played on the roof
+                    terrace where concrete sculptural forms rose like geological formations. This was not merely
+                    architecture — it was social engineering made visible, the welfare state given physical
+                    form, democracy poured into molds and left to cure in the Mediterranean sun.
+                </p>
+            </div>
+
+        </div>
     </section>
-    
+
+    <section id="sec3" class="relative text-white bg-black archivo">
+        <div class="max-w-6xl px-6 py-24 mx-auto">
+            <div class="flex flex-col gap-16 md:flex-row">
+                <div class="md:w-1/3">
+                    <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-6">Chapter II — 1953</span>
+                    <h2 class="mb-6 text-5xl md:text-6xl archivo-display reveal-up">
+                        THE<br>SMITHSONS
+                    </h2>
+                    <div class="w-16 h-1 mb-6 bg-white reveal-up"></div>
+                    <p class="text-sm leading-relaxed text-gray-400 delay-100 reveal-up">
+                        Alison and Peter Smithson. A marriage of minds that would redefine British architecture. They
+                        did not build much, but what they built changed everything.
+                    </p>
+                </div>
+
+                <div class="space-y-12 md:w-2/3">
+                    <div class="pl-8 border-l-2 border-white/20 reveal-up">
+                        <span class="block mb-4 text-4xl archivo-display text-white/10">1953</span>
+                        <p class="text-xl leading-relaxed text-gray-300">
+                            Alison Smithson publishes the first usage of "new brutalism" in <em>Architectural
+                                Design</em>. The plan for their unbuilt Soho house appears — a house that would have
+                            exposed its structure entirely, "without interior finishes wherever practicable." The
+                            building was never built. The idea was unstoppable.
+                        </p>
+                    </div>
+
+                    <div class="pl-8 delay-100 border-l-2 border-white/20 reveal-up">
+                        <span class="block mb-4 text-4xl archivo-display text-white/10">1954</span>
+                        <p class="text-xl leading-relaxed text-gray-300">
+                            Hunstanton School opens in Norfolk. Inspired by Mies van der Rohe's Alumni Memorial Hall in
+                            Chicago, it becomes the first completed building in the world to carry the title "new
+                            brutalist" by its own architects. Philip Johnson declares it "the most truly modern building
+                            in England." The water tank, normally hidden, stands proud as a tower. Pipes and conduits
+                            run visible along corridors. Nothing is concealed. Everything is honest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec4" class="relative flex items-center min-h-screen text-white bg-neutral-900 archivo">
+        <div class="max-w-6xl px-6 py-24 mx-auto">
+            <div class="grid items-start gap-16 md:grid-cols-2">
+                <div>
+                    <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-6">Chapter III — 1955</span>
+                    <h2 class="mb-8 text-5xl md:text-7xl archivo-display reveal-up">
+                        THE<br>CRITIC
+                    </h2>
+                    <p class="mb-6 text-lg leading-relaxed text-gray-300 delay-100 reveal-up">
+                        Reyner Banham was not an architect. He was a historian with the soul of a poet and the precision
+                        of a scientist. In 1955, he published <em>The New Brutalism</em> — an essay that would become
+                        the movement's bible.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300 delay-200 reveal-up">
+                        Banham gave brutalism its three commandments: <strong>Formal legibility of plan</strong>.
+                        <strong>Clear exhibition of structure</strong>. <strong>Valuation of materials for their
+                            inherent qualities 'as found'</strong>. He linked the Smithsons' ethic to Le Corbusier's
+                        <em>béton brut</em> and Dubuffet's <em>art brut</em> — raw art, raw concrete, raw truth.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="p-8 border bg-neutral-800 border-white/10 reveal-up">
+                        <p class="mb-4 text-2xl italic leading-relaxed text-gray-200 playfair">
+                            "If there is one single verbal formula that has made the concept of Brutalism admissible in
+                            most of the world's Western languages, it is that Le Corbusier himself described that
+                            concrete work as 'béton-brut'."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-8 h-px bg-white/40"></div>
+                            <span class="text-xs tracking-widest text-gray-500 uppercase">Reyner Banham, 1966</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 delay-100 border bg-neutral-800 border-white/10 reveal-up">
+                        <p class="text-lg leading-relaxed text-gray-300">
+                            In 1966, Banham expanded his thesis into a book: <em>The New Brutalism: Ethic or
+                                Aesthetic?</em> The question mark was deliberate. He knew that what the Smithsons had
+                            created was not merely a look — it was a way of seeing. A moral position. The woodness of
+                            the wood. The sandiness of the sand. The concreteness of concrete.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec5" class="relative text-white bg-black archivo">
+        <div class="px-6 py-24 mx-auto max-w-7xl">
+            <div class="mb-16 text-center">
+                <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-6">Chapter IV — The Golden
+                    Age</span>
+                <h2 class="text-6xl md:text-8xl archivo-display reveal-up">
+                    CONCRETE CATHEDRALS
+                </h2>
+            </div>
+
+            <div class="grid gap-px md:grid-cols-3 bg-white/10">
+                <!-- Barbican -->
+                <div class="p-8 bg-black reveal-up">
+                    <span class="block mb-4 text-4xl archivo-display text-white/10">1965</span>
+                    <h3 class="mb-4 text-2xl archivo-display">BARBICAN</h3>
+                    <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                        Chamberlin, Powell & Bon. London. A city within a city — towers, terraces, lakes, a fortress of
+                        culture rising from the ashes of the Blitz. The largest arts center in Europe, wrapped in
+                        concrete that refuses to pretend it is anything else.
+                    </p>
+                    <span class="text-xs tracking-widest text-gray-600 uppercase">London, UK</span>
+                </div>
+
+                <!-- National Theatre -->
+                <div class="p-8 delay-100 bg-black reveal-up">
+                    <span class="block mb-4 text-4xl archivo-display text-white/10">1976</span>
+                    <h3 class="mb-4 text-2xl archivo-display">NATIONAL THEATRE</h3>
+                    <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                        Denys Lasdun. The South Bank. Tiered concrete terraces cascading toward the Thames like a
+                        ziggurat for the modern age. "A building should be read like a geography," Lasdun said. And so
+                        it is — a landscape of board-marked concrete, shadow and light, drama made permanent.
+                    </p>
+                    <span class="text-xs tracking-widest text-gray-600 uppercase">London, UK</span>
+                </div>
+
+                <!-- Boston City Hall -->
+                <div class="p-8 delay-200 bg-black reveal-up">
+                    <span class="block mb-4 text-4xl archivo-display text-white/10">1968</span>
+                    <h3 class="mb-4 text-2xl archivo-display">BOSTON CITY HALL</h3>
+                    <p class="mb-4 text-sm leading-relaxed text-gray-400">
+                        Kallmann, McKinnell & Knowles. The building that dared to look like what it was — government as
+                        geology, democracy as fortress. Its overhanging volumes and shadowed voids spoke of civic power
+                        without classical columns or marble pretense.
+                    </p>
+                    <span class="text-xs tracking-widest text-gray-600 uppercase">Boston, USA</span>
+                </div>
+            </div>
+
+            <div class="grid gap-16 mt-16 md:grid-cols-2">
+                <div class="reveal-up">
+                    <h3 class="mb-6 text-3xl archivo-display">THE SOCIALIST DREAM</h3>
+                    <p class="leading-relaxed text-gray-300">
+                        In the Eastern Bloc, brutalism found its ideological home. Concrete emphasized equality — no
+                        marble for the bosses, no ornament for the bourgeoisie. Paneláky rose across Czechoslovakia. The
+                        Genex Tower pierced the Belgrade sky. Soviet architects trained Vietnamese builders. From Skopje
+                        to Hanoi, the language of raw concrete became the architecture of utopia.
+                    </p>
+                </div>
+                <div class="delay-100 reveal-up">
+                    <h3 class="mb-6 text-3xl archivo-display">THE CAMPUS REVOLUTION</h3>
+                    <p class="leading-relaxed text-gray-300">
+                        Universities became brutalism's laboratories. Essex, East Anglia, York, Durham — each campus a
+                        concrete experiment in communal living. The ziggurats of Lasdun. The beehives of Oxford. The
+                        History Faculty at Cambridge, where James Stirling turned education into a geometric poem.
+                        Knowledge, poured in concrete, left to weather and age with dignity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec6" class="relative flex items-center justify-center min-h-screen text-white bg-black archivo">
+        <div class="w-full max-w-6xl px-6 py-24 mx-auto">
+            <div class="items-center w-full mb-16 text-center">
+                <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-6">Chapter V — The Return</span>
+                <h2 class="text-6xl md:text-8xl archivo-display reveal-up">
+                    NEOBRUTALISM
+                </h2>
+            </div>
+
+            <div class="grid gap-8 mb-16 md:grid-cols-3">
+                <div class="p-8 border bg-neutral-900 border-white/10 reveal-up">
+                    <span class="block mb-4 text-5xl archivo-display text-white/10">2015</span>
+                    <p class="leading-relaxed text-gray-300">
+                        <em>Brutal London</em> is published. <em>This Brutal World</em> follows. Instagram accounts
+                        dedicated to concrete gain millions of followers. The children of the demolition era grow up and
+                        wonder what was lost.
+                    </p>
+                </div>
+
+                <div class="p-8 delay-100 border bg-neutral-900 border-white/10 reveal-up">
+                    <span class="block mb-4 text-5xl archivo-display text-white/10">2018</span>
+                    <p class="leading-relaxed text-gray-300">
+                        The <em>Atlas of Brutalist Architecture</em> documents over 850 buildings across 102 countries.
+                        Preston Bus Station, twice threatened with demolition, gains Grade II listed status. Brutalism
+                        has finally come of age.
+                    </p>
+                </div>
+
+                <div class="p-8 delay-200 border bg-neutral-900 border-white/10 reveal-up">
+                    <span class="block mb-4 text-5xl archivo-display text-white/10">2020</span>
+                    <p class="leading-relaxed text-gray-300">
+                        Grafton Architects win the Pritzker Prize for their neobrutalist UTEC campus in Lima. The
+                        citation praises "an urban icon" that exposes its structure with the same honesty the Smithsons
+                        demanded seventy years before.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full mx-auto text-center reveal-up">
+                <p class="mb-8 text-2xl italic leading-relaxed text-gray-300 md:text-3xl playfair">
+                    "The battle has been won and brutalism has finally come of age."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-px bg-white/40"></div>
+                    <span class="text-xs tracking-[0.3em] text-gray-500 uppercase">Catherine Croft, Twentieth Century
+                        Society</span>
+                    <div class="w-12 h-px bg-white/40"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec7" class="relative py-32 text-white bg-neutral-900 archivo">
+        <div class="max-w-4xl px-6 mx-auto text-center">
+            <span class="text-xs tracking-[0.3em] text-gray-500 uppercase block mb-12">Epilogue</span>
+
+            <h2 class="mb-12 text-4xl md:text-6xl archivo-display reveal-up">
+                THE WOODNESS<br>OF THE WOOD
+            </h2>
+
+            <p class="mb-8 text-xl leading-relaxed text-gray-300 delay-100 reveal-up">
+                Peter Smithson believed brutalism was not concerned with the material as such but rather the
+                <em>quality</em> of material. The woodness of the wood. The sandiness of the sand. The concreteness of
+                concrete.
+            </p>
+
+            <p class="text-xl leading-relaxed text-gray-300 delay-200 reveal-up">
+                After seventy years of praise and demolition, after utopia and decay, after neobrutalism and Instagram
+                aesthetics, this remains the core: architecture that refuses to lie. That shows its bones. That stands
+                in the rain and lets the rain show where it has been. That ages not with shame but with the dignity of
+                stone — because concrete, at its best, is nothing less than artificial stone, cast by human hands, cured
+                by time, honest forever.
+            </p>
+
+        </div>
+    </section>
+
+    <footer class="text-white bg-black border-t border-white/20 archivo">
+        <div class="flex flex-col items-center justify-between max-w-6xl gap-4 px-6 py-12 mx-auto md:flex-row">
+            <span class="text-sm text-gray-500">Designed by <a href="https://github.com/toohightocode" class="text-gray-300 underline">Edoardo Gozzi</a></span>
+            <a href="src/credits.html" class="text-sm tracking-widest text-gray-500 uppercase transition-colors duration-300 hover:text-white">Credits</a>
+        </div>
+    </footer>
 </body>
 </html>
